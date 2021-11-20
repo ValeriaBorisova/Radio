@@ -13,11 +13,16 @@ public class Radio {
     private boolean plus = true;
     private boolean minus = true;
 
+    public Radio() {
+    }
+
     public int getCurrentVolume() {
+
         return currentVolume;
     }
 
     public void setCurrentVolume(int currentVolume) {
+
         this.currentVolume = currentVolume;
     }
 
@@ -26,6 +31,7 @@ public class Radio {
     }
 
     public void setPlus(boolean plus) {
+
         this.plus = plus;
     }
 
@@ -34,14 +40,17 @@ public class Radio {
     }
 
     public void setMinus(boolean minus) {
+
         this.minus = minus;
     }
 
     public boolean isNext() {
+
         return next;
     }
 
     public void setNext(boolean next) {
+
         this.next = next;
     }
 
@@ -55,14 +64,14 @@ public class Radio {
 
 
     public void changeNextRadioStation() {
-        currentRadioStation ++;
+        currentRadioStation++;
         if (currentRadioStation > 9) {
             currentRadioStation = 0;
         }
     }
 
     public void changePrevRadioStation() {
-        currentRadioStation --;
+        currentRadioStation--;
         if (currentRadioStation < 0) {
             currentRadioStation = 9;
         }
@@ -73,14 +82,14 @@ public class Radio {
         if (currentVolume >= maxVolume) {
             return;
         }
-        currentVolume ++;
+        currentVolume++;
     }
 
     public void volumeDown() {
         if (currentVolume <= minVolume) {
             return;
         }
-        currentVolume --;
+        currentVolume--;
     }
 
 
@@ -94,6 +103,7 @@ public class Radio {
     }
 
     public int getCurrentRadioStation() {
+
         return currentRadioStation;
     }
 
@@ -103,6 +113,7 @@ public class Radio {
 
 
     public void setMaxRadioStation(int maxRadioStation) {
+
         this.maxRadioStation = maxRadioStation;
     }
 
@@ -110,4 +121,11 @@ public class Radio {
         this.minRadioStation = minRadioStation;
     }
 
+    public int getMinRadioStation() {
+        return minRadioStation;
+    }
+
+    public int getMaxRadioStation() {
+        return maxRadioStation;
+    }
 }
